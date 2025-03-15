@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://bf5x3to4dvd16"]
+[gd_scene load_steps=3 format=3 uid="uid://bf5x3to4dvd16"]
+
+[ext_resource type="Script" uid="uid://bwwv7j2eaapn8" path="res://scripts/rotation.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://cb180yomc6qs0" path="res://models/icon.svg" id="2_0wfyh"]
 
 [node name="main" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+script = ExtResource("1_o5qli")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("2_0wfyh")
