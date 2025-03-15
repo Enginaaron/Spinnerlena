@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Spinnerlena"
+run/main_scene="uid://bf5x3to4dvd16"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://models/icon.svg"
