@@ -51,7 +51,7 @@ sky = SubResource("Sky_tipki")
 [node name="main" type="Node3D"]
 
 [node name="Selena" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.2, 1.74846e-08, -2.08501e-16, 0, 2.38498e-09, 0.2, 1.74846e-08, 0.2, -2.38498e-09, 0, -4.86345, -6.56775)
+transform = Transform3D(-0.2, 1.74846e-08, -2.08501e-16, 0, 2.38498e-09, 0.2, 1.74846e-08, 0.2, -2.38498e-09, 0, -4.86345, -7.21262)
 material_override = ExtResource("1_tefeu")
 material_overlay = ExtResource("1_tefeu")
 gi_mode = 2
@@ -59,7 +59,7 @@ mesh = ExtResource("1_tbgi4")
 script = ExtResource("2_0wfyh")
 
 [node name="Platform" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32.1158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -37.5574)
 mesh = SubResource("BoxMesh_jyhfs")
 
 [node name="Camera3D" type="Camera3D" parent="."]
