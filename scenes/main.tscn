@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bf5x3to4dvd16"]
+[gd_scene load_steps=20 format=3 uid="uid://bf5x3to4dvd16"]
 
 [ext_resource type="Script" uid="uid://bwfud25td2vtp" path="res://scripts/camera.gd" id="1_o5qli"]
 [ext_resource type="ArrayMesh" uid="uid://bgvvdg7x16u5s" path="res://addons/selina_Mesh_0.res" id="1_tbgi4"]
 [ext_resource type="Material" uid="uid://b7m5kjtajtaoc" path="res://addons/Material.001.tres" id="1_tefeu"]
 [ext_resource type="Script" uid="uid://bwwv7j2eaapn8" path="res://scripts/rotation.gd" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://djge0ikllj0yk" path="res://scripts/label.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://btjsui3uusr7h" path="res://scripts/button.gd" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://bnvy4egxnhvke" path="res://addons/cutting-mat.png" id="6_tefeu"]
 
@@ -68,6 +69,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5, 
 environment = SubResource("Environment_o5qli")
 script = ExtResource("1_o5qli")
 
+[node name="Label" type="Label" parent="Camera3D"]
+offset_right = 153.0
+offset_bottom = 92.0
+scale = Vector2(2, 2)
+text = "RPM: "
+script = ExtResource("3_jyhfs")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.991658, 0.122866, 0.0389753, 0, -0.30237, 0.953191, 0.128899, -0.945239, -0.299847, 0, 64.1794, 0.0932541)
 
@@ -95,14 +103,11 @@ environment = SubResource("Environment_85g3d")
 
 [node name="countdown_timer" type="Timer" parent="."]
 
-[node name="stopwatchText" type="Label" parent="."]
-offset_right = 153.0
-offset_bottom = 92.0
-scale = Vector2(2, 2)
-text = "0.0"
+[node name="stopwatch_timer" type="Timer" parent="."]
 
 [node name="countdown_label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 
 [connection signal="timeout" from="countdown_timer" to="Selena" method="_on_countdown_timer_timeout"]
+[connection signal="timeout" from="stopwatch_timer" to="Selena" method="_on_stopwatch_timer_timeout"]
